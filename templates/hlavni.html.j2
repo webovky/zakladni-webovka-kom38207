@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%}Titulek{%endblock%}</title>
+    
+    <link rel="stylesheet" 
+          href="{{ url_for('static', filename='styles.css')}}">
+
+</head>
+
+<body>
+
+<h1>Geochronologie</h1>
+
+<ul>
+    <li><a href="{{ url_for('index') }}">úvod</a></li>
+    <li><a href="{{ url_for('abc') }}">odhad</a></li>
+    <li><a href="{{ url_for('blog') }}">blog</a></li>
+    <li><a href="{{ url_for('login') }}">loging</a></li>
+    <li><a href="/horniny/https://ottima-power.com/cs/určení-stáří-hornin-a-fosilií/">určení stáří</a></li>
+</ul>
+
+
+{% block obsah %}
+
+
+
+<p>Geochronologie je jedna ze základních metod, pomocí 
+které se v geologii určuje stáří hornin, minerálů a dalších přírodních objektů. 
+K určení stáří se využívá radioaktivního rozpadu některých přírodních prvků jako například izotopu 
+238U na stabilní izotop 206Pb, který je závislý na stanovení přesného poločasu rozpadu, respektive na rozpadové konstantě lambda.
+U geochronologie je nezbytný předpoklad, že rozpad je exponenciální a zcela nezávislý na změně chemických
+a fyzikálních podmínek a jejich změně. Stáří se určuje hlavně podle těžších radioizotopů, které mají dlouhý poločas rozpadu,
+ jelikož stáří hornin často sahá až několik miliard let zpět. Nejvhodnější jsou pro geochronologii izotopy, které existují po celou dobu existence Země.
+K tomu, aby se dala geochronologie aktivně využívat, je nutné splnit některé základní podmínky, mezi které patří, 
+že studované vzorky musí být stejného stáří, a sledované vzorky musí pocházet z uzavřeného systému, aby během jeho existence nedošlo 
+k migraci izotopů. Experimentálně musí být dostatečně určena rozpadová konstanta. Sledovaný vzorek musí být dostatečně reprezentativní pro sledovanou oblast
+ a použitá metodika musí být dobře známá a přesná.
+</p>
+
+
+
+
+{% endblock obsah %} 
+
+
+
+
+
+
+<p class="login">
+{% if 'user' in session %}
+Du singest zu <strong>{{ session.get('user') }}</strong>. 
+<a href="{{ url_for('logout') }}">Singen out!</a>
+{% else %}
+Katastrofen!!! Du bist nicht singen in. 
+<a href="{{ url_for('login') }}">Singen Here!</a>
+{% endif %}
+</p>
+
+
+{% for category, message in get_flashed_messages(with_categories=true) %}
+    <p class="message {{ category }}">{{ message }}</p>
+{% endfor %}
+
+
+
+</body>
+
+</html>
+
