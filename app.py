@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 app.secret_key = (
     b"\xe3\x84t\x8b\x02\x1c\xfb\x82PH\x19\xe8\x98\x05\x90\xa8\xc83\xf1\xe2\xf4v\xfe\xf0"
-    b"\xe3\x84t\x8b\x02\x1c\xfb\x82PH\x19\xe8\x98\x05\x90\xa8\xc83\xf1\xe2\xf4v\xfe\xf0"
+    b"\xe3\x84t\x8b\x02\x1c\xfb\x82PH\x16\xe8\x99\x05\x90\xa8\xc83\xf7\xe2\xf4v\xfe\xf0"
 )
 
 
@@ -33,10 +33,12 @@ def index():
 
 
 @app.route("/odhad/")
+@login_required
 def abc():
     return render_template("odhad.html.j2")
 
 @app.route("/horniny/<path:parametr>/")
+@login_required
 def urcitenebanany(parametr):
     return render_template("horniny.html.j2", parametr=parametr)
 
