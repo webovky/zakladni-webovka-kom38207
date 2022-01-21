@@ -1,0 +1,42 @@
+h1 {
+    color: rgb(199, 106, 43);
+    text-align: center;
+}
+
+p {
+    color: rgb(24, 156, 165);
+    text-align: center;
+}
+
+ul {
+    text-align: left;
+}
+
+form {
+    text-align: center;
+}
+
+body{
+    background-color : rgb(221, 223, 201);
+    text-align: center;
+   
+}
+
+
+
+.message {
+    width: 50%;
+    border: solid black 2px;
+    padding: 1em;
+    background-color: lightgray;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pass {
+    color: green;
+}
+.err {
+    color: red;
+}

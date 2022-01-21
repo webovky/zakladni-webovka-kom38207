@@ -1,0 +1,26 @@
+{% extends "hlavni.html.j2" %}
+
+{%block title%}ODHAD{%endblock%}
+
+{% block obsah %}
+<body>
+Tady jsem si to přepsal(popsal) ne.
+
+{% for i in  range(1,5) -%}
+<h{{i}} >UVEDENÍ DATA, HORNIN A ZKAMENĚLIN</h{{i}}>
+{% endfor -%}
+<p> poměr U-235:Pb-207 atomů v pegmatite je 1:1, a jejich poměr v žulové je 1:3. Použití stejné úvahy o proporcích jako v části 2B výše, studenti mohou určit, jak starý pegmatit a žula jsou., Měli by psát věky pegmatitu a žuly vedle názvů hornin v seznamu pod blokovým diagramem.
+
+vynesením poločas na typ stupnice, známý jako logaritmické měřítko, zakřivené linie, jako že pro M & MTM aktivita může být narovnal, jak můžete vidět v grafu na. To činí křivku užitečnější, protože je snazší ji přesněji vykreslit. To je zvláště užitečné pro poměry rodičovského izotopu k dceřinému izotopu, který představuje méně než jeden poločas., Na blokové schéma, pokud geochemické laboratoři zjistí, že vulkanický popel, který je v prachovce má poměr U-235:Pb-207 47:3 (94% z původní U-235 zůstává), to znamená, že popel je 70 milionů let. Pokud je poměr v čediči 7:3 (70% původního U-235 zůstává), pak je čedič Starý 350 milionů let. Studenti by měli psát věku sopečný popel vedle břidlice, prachovce a čedič na seznamu níže blokové schéma.,
+zpět na začátek</p>
+
+<<img src="{{ url_for('static', filename='McKinneyFig4.gif') }}" alt="">
+</body>
+
+
+
+
+
+
+{% endblock obsah %}
+
